@@ -100,6 +100,42 @@
   .contact-info-box {
     justify-content: left;
   }
+  #founder img {
+    margin-bottom: 30px;
+  }
+  .founder-content {
+    max-width: 38.66vw;
+    margin: 0 30px;
+  }
+  .values-list {
+    display: flex;
+    column-gap: 30px;
+  }
+  .red-border-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+    height: auto;
+  }
+  #vision .page-para {
+    margin-bottom: 0;
+  }
+  .policy-box h1 {
+    font-size: 2.5rem;
+  }
+  .policy-box label {
+    font-size: 1rem;
+    line-height: 19.2px;
+  }
+  .policy-box h5 {
+    font-size: 1.25rem;
+  }
+  .product-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
 }
 @media only screen and (max-width: 830.5px) {
   .footer-wrapper {
@@ -141,6 +177,17 @@
   .about-bg {
     height: 450px;
     padding: 60px 33px 0;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  #about-about .about-bg {
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  #coming-products .curved-section-width,
+  #product-portfolio .curved-section-width,
+  #bulk-biotech .curved-section-width {
+    padding: 50px 0;
   }
 }
 @media screen and (max-width: 567.5px) {
@@ -162,6 +209,16 @@
   }
   #contact-form-section .hero-section {
     padding: 50px 15px;
+  }
+  .policy-box h1 {
+    font-size: 2rem;
+  }
+  .policy-box label {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+  .policy-box h5 {
+    font-size: 1.25rem;
   }
 }
 @media screen and (max-width: 475.5px) {
