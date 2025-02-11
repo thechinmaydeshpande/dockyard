@@ -1,32 +1,21 @@
-new WOW().init();
-const blobContactPage = document.getElementById("blob2");
-
-document.body.onpointermove = (event) => {
-  const { clientX, clientY } = event;
-
-  blobContactPage.animate(
-    {
-      left: `${clientX}px`,
-      top: `${clientY}px`,
-    },
-    {
-      duration: 900,
-      fill: "forwards",
-    }
-  );
-};
-
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("DOM is fully loaded");
+
   const form = document.querySelector(".contact-form");
+  if (!form) {
+    console.error("Form not found!");
+    return; // Stop execution if form is not found
+  }
+
   const responseMessage = document.createElement("p");
   responseMessage.style.display = "none"; // Hide initially
   responseMessage.style.marginTop = "10px";
   form.appendChild(responseMessage); // Add message below form
 
   form.addEventListener("submit", async function (event) {
+    console.log("Form submit event triggered!"); // Check if submit is firing
     event.preventDefault(); // Prevent default form submission
 
-    // Collecting form data
     const formData = {
       name: document.querySelector("input[name='name']").value,
       phone: document.querySelector("input[name='phone']").value,
@@ -34,12 +23,18 @@ document.addEventListener("DOMContentLoaded", function () {
       message: document.querySelector("input[name='message']").value,
     };
 
-    responseMessage.style.display = "block"; // Show message
+    if (!formData.name || !formData.phone || !formData.email || !formData.message) {
+      responseMessage.style.color = "red";
+      responseMessage.textContent = "Please fill in all required fields.";
+      return; // Stop submission if form is incomplete
+    }
+
+    responseMessage.style.display = "block"; // Show loading state
     responseMessage.style.color = "black";
     responseMessage.textContent = "Submitting..."; // Loading state
 
     try {
-      const response = await fetch("https://your-backend-api.com/submit", {
+      const response = await fetch("http://52.66.248.42:3000/enquiry", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -52,10 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (response.ok) {
         responseMessage.style.color = "green";
         responseMessage.textContent = "Form submitted successfully!";
-        form.reset(); // Clear form fields after success
+        form.reset(); 
       } else {
         responseMessage.style.color = "red";
-        responseMessage.textContent = "Error: " + result.message;
+        responseMessage.textContent = `Error: ${result.message || "An error occurred."}`;
       }
     } catch (error) {
       console.error("Error submitting form:", error);
