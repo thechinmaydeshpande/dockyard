@@ -43,11 +43,12 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       const result = await response.json();
+      console.log("Response Status:", response.status); // Debug response status
 
       if (response.ok) {
         responseMessage.style.color = "green";
         responseMessage.textContent = "Form submitted successfully!";
-        form.reset(); 
+        form.reset(); // Clear form fields after success
       } else {
         responseMessage.style.color = "red";
         responseMessage.textContent = `Error: ${result.message || "An error occurred."}`;
