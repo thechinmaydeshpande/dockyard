@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     responseMessage.textContent = "Submitting..."; // Loading state
 
     try {
-      const response = await fetch("http://52.66.248.42:3000/enquiry", {
+      const response = await fetch("http://43.204.107.170:3000/enquiry", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
