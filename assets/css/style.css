@@ -19,6 +19,12 @@
   --form-input-border: rgba(205, 209, 220, 1);
   --form-input-placeholder: rgba(193, 199, 222, 1);
   --form-input-color: rgba(21, 23, 31, 1);
+  --product-detail-form-bg: rgba(242, 243, 238, 1);
+  --product-detail-border: rgba(205, 209, 220, 1);
+  --product-detail-label: rgba(30, 32, 44, 1);
+  --product-detail-placeholder: rgba(193, 199, 222, 1);
+  --gray-text: rgba(64, 64, 64, 1);
+  --orange: rgba(237, 154, 58, 1);
   --hover-transition: 0.2s all ease-in-out;
 }
 body {
@@ -341,11 +347,11 @@ button {
   color: var(--yellow-text);
 }
 .about-max-width {
-  max-width: 41.25rem;
+  max-width: 46.25rem;
 }
 /*=== PRODUCT ====*/
 #product {
-  padding-bottom: 21.875rem;
+  padding-bottom: 35.875rem;
 }
 .product-box {
   position: relative;
@@ -539,7 +545,7 @@ button {
 }
 .contact-form input {
   font-family: "Inter", sans-serif;
-  font-weight: 400px;
+  font-weight: 400;
   font-size: 1rem;
   border: var(--form-border-color) 1px solid;
   border-radius: 6px;
@@ -662,6 +668,14 @@ button {
   font-weight: normal;
   text-decoration: none;
   z-index: 10;
+  transition: color 0.1s ease-in-out;
+}
+.red-border-box:hover .red-border-box-inner {
+  color: white;
+}
+
+.explode-circle ~ .red-border-box-inner {
+  color: white !important;
 }
 .explode-circle {
   animation: explode 2s forwards;
@@ -805,6 +819,14 @@ button {
   line-height: 36px;
   font-weight: 400;
   color: var(--theme-blue);
+  margin-top: 7px;
+}
+.product-image-box p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: rgba(64, 64, 64, 1);
 }
 .product-list {
   row-gap: 25px;
@@ -824,4 +846,336 @@ button {
   padding: 50px 0;
   max-width: 56.38vw;
   margin: 0 auto;
+}
+.product-image-box {
+  background: rgba(229, 231, 222, 0.5);
+  transition: var(--hover-transition);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 180px;
+}
+.product-image-box:hover {
+  background: rgba(229, 231, 222, 1);
+  transition: var(--hover-transition);
+}
+.product-image-box img {
+  max-width: 150px;
+  max-height: 150px;
+  transition: var(--hover-transition);
+}
+.product-image-box:hover img {
+  scale: 1.1;
+  transition: var(--hover-transition);
+}
+/*==== PRODUCT DETAIL ====*/
+.product-slider-wrapper {
+  max-width: 75vw;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+.product-imgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.img-item {
+  max-width: 95px;
+}
+.img-display {
+  overflow: hidden;
+  border-radius: 24px;
+}
+.img-showcase {
+  display: flex;
+  width: 100%;
+  transition: all 0.5s ease;
+  border-radius: 24px;
+}
+.img-showcase img {
+  min-width: 100%;
+  border-radius: 24px;
+}
+.img-select {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+.img-select img {
+  display: block;
+  width: 100%;
+  border-radius: 16px;
+}
+.product-detail-name {
+  color: var(--theme-red);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 3.375rem;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+.product-detail-size {
+  font-family: "Montserrat", sans-serif;
+  color: var(--gray-text);
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 32px;
+}
+.product-detail-price {
+  font-family: "Montserrat", sans-serif;
+  color: var(--gray-text);
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 32px;
+}
+.size-btn {
+  display: flex;
+  column-gap: 15px;
+  margin-top: 30px;
+}
+.size-btn button,
+.size-btn a {
+  font-family: "Inter", sans-serif;
+  border: 1px solid var(--theme-red);
+  background: transparent;
+  border-radius: 4px;
+  padding: 6px 10px;
+  color: var(--theme-red);
+  transition: 0.2s all ease-in-out;
+}
+.size-btn button:hover,
+.size-btn a:hover {
+  background: var(--theme-red);
+  color: var(--white-text);
+  transition: 0.2s all ease-in-out;
+}
+.nav-pills .nav-link.active {
+  background: var(--theme-red);
+}
+.order-btn button {
+  padding: 12px 24px;
+}
+.product-detail-list {
+  margin-top: 30px;
+  padding-left: 15px;
+}
+.product-detail-list .page-para {
+  list-style: disc;
+  margin-bottom: 5px;
+}
+.product-certificate-content {
+  text-align: center;
+}
+.product-certificate-content .page-heading,
+.product-certificate-content .page-para {
+  margin-bottom: 10px;
+}
+.certificate-document {
+  text-align: center;
+  margin-top: 45px;
+}
+.certificate-document label {
+  margin-bottom: 25px;
+}
+.certificate-document .nav-pills {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+.certificate-document .nav-pills .nav-link {
+  background: var(--white-text);
+  width: 120px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.certificate-document .nav-pills .nav-link.active {
+  background: var(--theme-red);
+}
+.certificate-document .nav-pills .nav-link.active svg path {
+  fill: var(--white-text);
+}
+.certificate-document .nav-pills .nav-link.active {
+  background: var(--theme-red);
+}
+.certificate-document .nav-item p {
+  font-size: 16px;
+  max-width: 120px;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 20.8px;
+  margin-top: 5px;
+}
+.certificate-preview-section {
+  background: var(--theme-blue);
+  border-radius: 16px;
+  padding: 50px 0;
+}
+.btn-wrap {
+  position: absolute;
+  right: 35px;
+  bottom: -23px;
+  display: flex;
+  column-gap: 15px;
+}
+.tab-pane {
+  position: relative;
+}
+.btn-wrap button {
+  position: static;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+.btn-wrap button:hover {
+  background: rgba(255, 255, 255, 1);
+}
+.certificate-main-heading {
+  position: absolute;
+  top: -16px;
+  left: 52px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 38.4px;
+  color: var(--white-text);
+}
+.certi-caption {
+  position: absolute;
+  top: 30px;
+  left: 52px;
+  color: var(--white-text);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 19.2px;
+  font-weight: 500;
+}
+.product-detail-form-input {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  border: var(--product-detail-border) 1px solid;
+  border-radius: 6px;
+  background: var(--white-text);
+  color: var(--form-input-color);
+  padding: 10px;
+  width: 100%;
+}
+.product-detail-form-input::placeholder {
+  color: var(--product-detail-placeholder);
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 25.6px;
+  font-weight: 400;
+}
+.open-doc-btn {
+  position: absolute;
+  right: 52px;
+  background: var(--orange);
+  padding: 8px 20px;
+  color: var(--white-text);
+  border-radius: 8px;
+}
+#buy-now .modal-dialog,
+#quote-req .modal-dialog {
+  max-width: 740px;
+  width: 100%;
+}
+#buy-now .modal-body,
+#quote-req .modal-body {
+  padding: 64px 48px;
+  background: var(--product-detail-form-bg);
+  border-radius: 20px;
+}
+.product-detail-input-row {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 15px;
+  margin-bottom: 18px;
+}
+.product-detail-input-row label {
+  color: var(--product-detail-label);
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 25.6px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.modal-heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 39.2px;
+  color: rgba(0, 0, 0, 1);
+  margin-bottom: 20px;
+}
+.product-detail-modal-btn {
+  background: var(--theme-red);
+  color: var(--white-text);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-top: 20px;
+  transition: var(--hover-transition);
+}
+.product-detail-modal-btn:hover {
+  background: var(--theme-blue);
+  transition: var(--hover-transition);
+}
+#certification .hero-section {
+  padding: 4.375rem 24px 24px 24px;
+}
+#pdfModal .modal-dialog {
+  background: rgba(229, 231, 222, 1);
+  padding: 25px;
+  width: 100%;
+  max-width: 70vw;
+  height: 100vh;
+}
+#pdfModal .modal-content {
+  background: rgba(229, 231, 222, 1);
+  border: 0;
+}
+#modalCarousel .btn-wrap {
+  position: absolute;
+  transform: translateY(-66%) translateX(193%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+  right: -120px;
+}
+.modal-text {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 15px;
+  width: 250px; /* Adjust width as needed */
+  z-index: 10;
+}
+
+#modalHeading {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#modalCaption {
+  font-size: 18px;
+  color: #b02e25;
+}
+#pdfModal .carousel {
+  width: 600px;
+  height: 600px;
+}
+#pdfModal .modal-body {
+  position: relative; /* Needed for absolute positioning inside */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

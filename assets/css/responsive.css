@@ -136,6 +136,21 @@
     flex-wrap: nowrap;
     overflow-x: auto;
   }
+  .certificate-document .nav-pills .nav-link {
+    width: 80px;
+    height: 80px;
+  }
+  .certificate-document .nav-pills .nav-link svg {
+    width: 28px;
+    height: 35px;
+  }
+  .certificate-document .nav-item p {
+    font-size: 14px;
+    max-width: 95px;
+  }
+  iframe {
+    height: 250px;
+  }
 }
 @media only screen and (max-width: 830.5px) {
   .footer-wrapper {
@@ -219,6 +234,14 @@
   }
   .policy-box h5 {
     font-size: 1.25rem;
+  }
+  .certificate-document .nav-pills .nav-link {
+    width: 40px;
+    height: 40px;
+  }
+  .certificate-document .nav-pills .nav-link svg {
+    width: 18px;
+    height: 24px;
   }
 }
 @media screen and (max-width: 475.5px) {
