@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     try {
-      const response = await fetch("http://43.204.107.170:3000/enquiry", {
+      const response = await fetch("https://api.sukkshma.com/enquiry", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

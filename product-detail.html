@@ -683,21 +683,27 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">
-            <form>
+            <form class="order-form" method="post">
               <h1 class="modal-heading">Buy Now</h1>
               <div class="product-detail-input-row">
                 <div class="col-lg-6">
                   <label>Name</label>
                   <input
+                    type="name"
+                    name="name"
                     class="product-detail-form-input"
                     placeholder="Your Name"
+                    required
                   />
                 </div>
                 <div class="col-lg-6">
                   <label>Phone</label>
                   <input
+                    type="phone"
+                    name="phone"
                     class="product-detail-form-input"
                     placeholder="98XXX987XX"
+                    required
                   />
                 </div>
               </div>
@@ -705,34 +711,43 @@
                 <div class="col-lg-6">
                   <label>Email</label>
                   <input
+                    type="email"
+                    name="email"
                     class="product-detail-form-input"
                     placeholder="abc@email.com"
+                    required
                   />
                 </div>
                 <div class="col-lg-6">
                   <label>Address</label>
                   <input
+                    type="address"
+                    name="address"
                     class="product-detail-form-input"
                     placeholder="Your Address"
+                    required
                   />
                 </div>
               </div>
               <div class="product-detail-input-row">
                 <div class="col-lg-12">
                   <label>Quantity</label>
-                  <input class="product-detail-form-input" placeholder="5" />
+                  <input type="quantity" name="quantity" class="product-detail-form-input" placeholder="5" required/>
                 </div>
               </div>
               <div class="product-detail-input-row">
                 <div class="col-lg-12">
                   <label>Purpose for which the product is required</label>
                   <input
+                    type="purpose"
+                    name="purpose"
                     class="product-detail-form-input"
                     placeholder="Industrial Use"
+                    required
                   />
                 </div>
               </div>
-              <button class="product-detail-modal-btn">Place an Order</button>
+              <button class="product-detail-modal-btn" type="submit">Place an Order</button>
             </form>
           </div>
         </div>
@@ -749,21 +764,27 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">
-            <form>
+            <form class="request-form" method="post">
               <h1 class="modal-heading">Request a Quote</h1>
               <div class="product-detail-input-row">
                 <div class="col-lg-6">
                   <label>Name</label>
                   <input
+                    type="text"
+                    name="name"
                     class="product-detail-form-input"
                     placeholder="Your Name"
+                    required
                   />
                 </div>
                 <div class="col-lg-6">
                   <label>Phone</label>
                   <input
+                    type="tel"
+                    name="phone"
                     class="product-detail-form-input"
                     placeholder="98XXX987XX"
+                    required
                   />
                 </div>
               </div>
@@ -771,34 +792,43 @@
                 <div class="col-lg-6">
                   <label>Email</label>
                   <input
+                    type="text"
+                    name="email"
                     class="product-detail-form-input"
                     placeholder="abc@email.com"
+                    required
                   />
                 </div>
                 <div class="col-lg-6">
                   <label>Address</label>
                   <input
+                    type="text"
+                    name="address"
                     class="product-detail-form-input"
                     placeholder="Your Address"
+                    required
                   />
                 </div>
               </div>
               <div class="product-detail-input-row">
                 <div class="col-lg-12">
                   <label>Quantity</label>
-                  <input class="product-detail-form-input" placeholder="5" />
+                  <input type="number" name="quantity" class="product-detail-form-input" placeholder="5" required/>
                 </div>
               </div>
               <div class="product-detail-input-row">
                 <div class="col-lg-12">
                   <label>Purpose for which the product is required</label>
                   <input
+                    type="text"
+                    name="purpose"
                     class="product-detail-form-input"
                     placeholder="Industrial Use"
+                    required
                   />
                 </div>
               </div>
-              <button class="product-detail-modal-btn">Request a Quote</button>
+              <button class="product-detail-modal-btn" type="submit">Request a Quote</button>
             </form>
           </div>
         </div>
