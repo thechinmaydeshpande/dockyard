@@ -6,6 +6,12 @@
     <title>Sukkshma</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- FAVICON -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/favicon//favicon.png"
+    />
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -79,7 +85,7 @@
 
         <!-- Right aligned "About Us" button -->
         <div class="ms-auto d-sm-none sm-non-visible d-lg-block">
-          <a class="filled-btn suk-btn">Order Now</a>
+          <a class="filled-btn suk-btn" href="./product.html">Order Now</a>
         </div>
       </div>
     </nav>
@@ -114,23 +120,35 @@
             </h1>
           </div>
           <div class="form-wrapper wd-50">
-            <form class="contact-form" method="POST">
+            <form class="contact-form">
               <ul>
                 <li>
                   <label class="label-text">Name</label>
-                  <input type="text" name="name" placeholder="Name" required />
+                  <input type="text" name="name" placeholder="Name" />
                 </li>
                 <li>
                   <label class="label-text">Phone</label>
-                  <input type="tel" name="phone" placeholder="+91-9876543210" required />
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="+91-9876543210"
+                  />
                 </li>
                 <li>
                   <label class="label-text">Email</label>
-                  <input type="email" name="email" placeholder="example@email.com" required />
+                  <input
+                    type="text"
+                    name="email"
+                    placeholder="example@email.com"
+                  />
                 </li>
                 <li>
                   <label class="label-text">Message</label>
-                  <input type="text" name="message" placeholder="Enquiry Here" required />
+                  <input
+                    type="text"
+                    name="message"
+                    placeholder="Enquiry Here"
+                  />
                 </li>
               </ul>
               <button class="filled-btn suk-btn" type="submit">Submit</button>

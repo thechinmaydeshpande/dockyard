@@ -327,7 +327,7 @@ button {
   background: url(../images/homepage-about-background.jpg) center no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.5);
+  /* box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.5); */
   height: 42.1875rem;
   padding: 6rem 0 0;
 }
@@ -432,7 +432,7 @@ button {
   margin: 0 auto 3.5rem;
 }
 #quote .curved-section-width {
-  padding: 8rem 2rem;
+  padding: 6rem 2rem;
 }
 #quote .border-red-btn {
   z-index: 2;
@@ -620,7 +620,7 @@ button {
   max-width: 33.375rem;
 }
 #about-about .about-bg {
-  background: url(../images/about-about.jpg) center no-repeat;
+  background: url(../images/about-about.webp) center no-repeat;
   background-size: auto;
   background-size: cover;
   background-attachment: fixed;
@@ -647,6 +647,7 @@ button {
   position: relative;
   overflow: hidden;
   cursor: default;
+  transition: var(--hover-transition);
 }
 .red-border-box .page-para {
   position: relative;
@@ -668,12 +669,22 @@ button {
   font-weight: normal;
   text-decoration: none;
   z-index: 10;
-  transition: color 0.1s ease-in-out;
+  transition: var(--hover-transition);
+}
+.red-border-box:hover {
+  background: var(--theme-red);
+  transition: var(--hover-transition);
 }
 .red-border-box:hover .red-border-box-inner {
-  color: white;
+  background: var(--theme-red);
+  transition: var(--hover-transition);
 }
-
+.red-border-box:hover .red-border-box-inner {
+  color: rgba(229, 231, 222, 1);
+}
+.red-border-box:hover h3 {
+  color: rgba(229, 231, 222, 1);
+}
 .explode-circle ~ .red-border-box-inner {
   color: white !important;
 }
@@ -760,7 +771,7 @@ button {
 /*==== POLICY CONTAINER ====*/
 .policy-container {
   max-width: 55vw;
-  margin: 0 auto;
+  margin: 75px auto;
 }
 .policy-box {
   margin-bottom: 35px;
@@ -820,6 +831,9 @@ button {
   font-weight: 400;
   color: var(--theme-blue);
   margin-top: 7px;
+}
+.product-list .product-label {
+  color: var(--para-color);
 }
 .product-image-box p {
   font-family: "Inter", sans-serif;
@@ -1142,6 +1156,10 @@ button {
   background: rgba(229, 231, 222, 1);
   border: 0;
 }
+#pdfModal .modal-header {
+  padding: 0 30px;
+  border: none;
+}
 #modalCarousel .btn-wrap {
   position: absolute;
   transform: translateY(-66%) translateX(193%);
@@ -1151,23 +1169,27 @@ button {
   right: -120px;
 }
 .modal-text {
-  position: absolute;
+  /* position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
   padding: 15px;
-  width: 250px; /* Adjust width as needed */
-  z-index: 10;
+  width: 250px;
+  z-index: 10; */
 }
 
 #modalHeading {
-  font-size: 24px;
-  font-weight: bold;
+  color: var(--theme-red);
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 38.4px;
+  margin-bottom: 10px;
 }
-
 #modalCaption {
-  font-size: 18px;
-  color: #b02e25;
+  font-size: 1rem;
+  color: var(--theme-red);
+  font-weight: 500;
+  line-height: 19.2px;
 }
 #pdfModal .carousel {
   width: 600px;
@@ -1178,4 +1200,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.close-btn {
+  background: transparent;
 }

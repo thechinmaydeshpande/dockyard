@@ -3,9 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Sukkshma-About</title>
+    <title>Sukkshma</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- FAVICON -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/favicon//favicon.png"
+    />
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,13 +42,11 @@
       <div class="container-fluid nav-container">
         <!-- Logo -->
         <a class="navbar-brand" href="./index.html">
-          <div class="certificate-tabs">
-            <img
-              src="./assets/images/svg/nav-logo.svg"
-              class="img-fluid nav-logo"
-              alt="sukkshma"
-            />
-          </div>
+          <img
+            src="./assets/images/svg/nav-logo.svg"
+            class="img-fluid nav-logo"
+            alt="sukkshma"
+          />
         </a>
         <button
           class="navbar-toggler"
@@ -81,7 +85,7 @@
 
         <!-- Right aligned "About Us" button -->
         <div class="ms-auto d-sm-none sm-non-visible d-lg-block">
-          <a class="filled-btn suk-btn">Order Now</a>
+          <a class="filled-btn suk-btn" href="./product.html">Order Now</a>
         </div>
       </div>
     </nav>
@@ -345,7 +349,7 @@
             </li>
           </ul>
           <!-- Certificate Preview Section -->
-          <div class="certificate-preview-section">
+          <!-- <div class="certificate-preview-section">
             <div class="tab-content">
               <div class="tab-pane fade show active" id="certificate1">
                 <h1 class="certificate-main-heading">
@@ -631,6 +635,224 @@
                 </div>
               </div>
             </div>
+          </div> -->
+          <div class="certificate-preview-section">
+            <div class="tab-content">
+              <!-- Certificate Tab 1 -->
+              <div class="tab-pane fade show active" id="certificate1">
+                <h1 class="certificate-main-heading">
+                  Certificate of Analysis
+                </h1>
+                <h3 class="certi-caption">COA MP Biomedical</h3>
+                <button
+                  class="open-doc-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#pdfModal"
+                  data-carousel-id="carousel1"
+                >
+                  Open Document
+                </button>
+
+                <div id="carousel1" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div
+                      class="carousel-item active"
+                      data-title="COA MP Biomedical"
+                      data-src="./assets/pdfs/COA MP Biomedical.pdf"
+                    >
+                      <div></div>
+                    </div>
+                    <div
+                      class="carousel-item"
+                      data-title="COA SRL"
+                      data-src="./assets/pdfs/COA SRL.pdf"
+                    >
+                      <div></div>
+                    </div>
+                    <div
+                      class="carousel-item"
+                      data-title="COA Thermo"
+                      data-src="./assets/pdfs/COA Thermo.pdf"
+                    >
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-wrap">
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carousel1"
+                    data-bs-slide="prev"
+                  >
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+                      <path
+                        d="M8.96484 16L10.3748 14.59L4.79484 9L16.9648 9L16.9648 7L4.79484 7L10.3748 1.41L8.96485 -6.99868e-07L0.964844 8L8.96484 16Z"
+                        fill="#B02E25"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carousel1"
+                    data-bs-slide="next"
+                  >
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+                      <path
+                        d="M8.95312 0L7.54313 1.41L13.1231 7L0.953125 7L0.953125 9L13.1231 9L7.54313 14.59L8.95313 16L16.9531 8L8.95312 0Z"
+                        fill="#B02E25"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Certificate Tab 2 -->
+              <div class="tab-pane fade" id="certificate2">
+                <h1 class="certificate-main-heading">
+                  Material Safety Data Sheet
+                </h1>
+                <h3 class="certi-caption">MSDS Gold Bio</h3>
+                <button
+                  class="open-doc-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#pdfModal"
+                  data-carousel-id="carousel2"
+                >
+                  Open Document
+                </button>
+
+                <div id="carousel2" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div
+                      class="carousel-item active"
+                      data-title="MSDS Gold Bio"
+                      data-src="./assets/pdfs/MSDS Gold Bio.pdf"
+                    >
+                      <div></div>
+                    </div>
+                    <div
+                      class="carousel-item"
+                      data-title="MSDS Hi Media"
+                      data-src="./assets/pdfs/MSDS Hi Media.pdf"
+                    >
+                      <div></div>
+                    </div>
+                    <div
+                      class="carousel-item"
+                      data-title="MSDS Hi Biomolucule"
+                      data-src="./assets/pdfs/MSDS MP Biomolucule.pdf"
+                    >
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-wrap">
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carousel2"
+                    data-bs-slide="prev"
+                  >
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+                      <path
+                        d="M8.96484 16L10.3748 14.59L4.79484 9L16.9648 9L16.9648 7L4.79484 7L10.3748 1.41L8.96485 -6.99868e-07L0.964844 8L8.96484 16Z"
+                        fill="#B02E25"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carousel2"
+                    data-bs-slide="next"
+                  >
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+                      <path
+                        d="M8.95312 0L7.54313 1.41L13.1231 7L0.953125 7L0.953125 9L13.1231 9L7.54313 14.59L8.95313 16L16.9531 8L8.95312 0Z"
+                        fill="#B02E25"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Certificate Tab 3 -->
+              <div class="tab-pane fade" id="certificate3">
+                <h1 class="certificate-main-heading">Data Sheet</h1>
+                <h3 class="certi-caption">Datasheet Thermo</h3>
+                <button
+                  class="open-doc-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#pdfModal"
+                  data-carousel-id="carousel3"
+                >
+                  Open Document
+                </button>
+
+                <div id="carousel3" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div
+                      class="carousel-item active"
+                      data-title="Datasheet Thermo"
+                      data-src="./assets/pdfs/Data Sheet Thermo.pdf"
+                    >
+                      <div></div>
+                    </div>
+                    <div
+                      class="carousel-item"
+                      data-title="Datasheet Canavax"
+                      data-src="./assets/pdfs/Datasheet Canavax.pdf"
+                    >
+                      <div></div>
+                    </div>
+                    <div
+                      class="carousel-item"
+                      data-title="Datasheet Himedia"
+                      data-src="./assets/pdfs/datasheet HiMedia.pdf"
+                    >
+                      <div></div>
+                    </div>
+                    <div
+                      class="carousel-item"
+                      data-title="Datasheet Promega"
+                      data-src="./assets/pdfs/Datasheet Promega.pdf"
+                    >
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-wrap">
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carousel3"
+                    data-bs-slide="prev"
+                  >
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+                      <path
+                        d="M8.96484 16L10.3748 14.59L4.79484 9L16.9648 9L16.9648 7L4.79484 7L10.3748 1.41L8.96485 -6.99868e-07L0.964844 8L8.96484 16Z"
+                        fill="#B02E25"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carousel3"
+                    data-bs-slide="next"
+                  >
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+                      <path
+                        d="M8.95312 0L7.54313 1.41L13.1231 7L0.953125 7L0.953125 9L13.1231 9L7.54313 14.59L8.95313 16L16.9531 8L8.95312 0Z"
+                        fill="#B02E25"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -689,21 +911,15 @@
                 <div class="col-lg-6">
                   <label>Name</label>
                   <input
-                    type="name"
-                    name="name"
                     class="product-detail-form-input"
                     placeholder="Your Name"
-                    required
                   />
                 </div>
                 <div class="col-lg-6">
                   <label>Phone</label>
                   <input
-                    type="phone"
-                    name="phone"
                     class="product-detail-form-input"
                     placeholder="98XXX987XX"
-                    required
                   />
                 </div>
               </div>
@@ -711,43 +927,34 @@
                 <div class="col-lg-6">
                   <label>Email</label>
                   <input
-                    type="email"
-                    name="email"
                     class="product-detail-form-input"
                     placeholder="abc@email.com"
-                    required
                   />
                 </div>
                 <div class="col-lg-6">
                   <label>Address</label>
                   <input
-                    type="address"
-                    name="address"
                     class="product-detail-form-input"
                     placeholder="Your Address"
-                    required
                   />
                 </div>
               </div>
               <div class="product-detail-input-row">
                 <div class="col-lg-12">
                   <label>Quantity</label>
-                  <input type="quantity" name="quantity" class="product-detail-form-input" placeholder="5" required/>
+                  <input class="product-detail-form-input" placeholder="5" />
                 </div>
               </div>
               <div class="product-detail-input-row">
                 <div class="col-lg-12">
                   <label>Purpose for which the product is required</label>
                   <input
-                    type="purpose"
-                    name="purpose"
                     class="product-detail-form-input"
                     placeholder="Industrial Use"
-                    required
                   />
                 </div>
               </div>
-              <button class="product-detail-modal-btn" type="submit">Place an Order</button>
+              <button class="product-detail-modal-btn">Place an Order</button>
             </form>
           </div>
         </div>
@@ -764,27 +971,21 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">
-            <form class="request-form" method="post">
+            <form>
               <h1 class="modal-heading">Request a Quote</h1>
               <div class="product-detail-input-row">
                 <div class="col-lg-6">
                   <label>Name</label>
                   <input
-                    type="text"
-                    name="name"
                     class="product-detail-form-input"
                     placeholder="Your Name"
-                    required
                   />
                 </div>
                 <div class="col-lg-6">
                   <label>Phone</label>
                   <input
-                    type="tel"
-                    name="phone"
                     class="product-detail-form-input"
                     placeholder="98XXX987XX"
-                    required
                   />
                 </div>
               </div>
@@ -792,50 +993,41 @@
                 <div class="col-lg-6">
                   <label>Email</label>
                   <input
-                    type="text"
-                    name="email"
                     class="product-detail-form-input"
                     placeholder="abc@email.com"
-                    required
                   />
                 </div>
                 <div class="col-lg-6">
                   <label>Address</label>
                   <input
-                    type="text"
-                    name="address"
                     class="product-detail-form-input"
                     placeholder="Your Address"
-                    required
                   />
                 </div>
               </div>
               <div class="product-detail-input-row">
                 <div class="col-lg-12">
                   <label>Quantity</label>
-                  <input type="number" name="quantity" class="product-detail-form-input" placeholder="5" required/>
+                  <input class="product-detail-form-input" placeholder="5" />
                 </div>
               </div>
               <div class="product-detail-input-row">
                 <div class="col-lg-12">
                   <label>Purpose for which the product is required</label>
                   <input
-                    type="text"
-                    name="purpose"
                     class="product-detail-form-input"
                     placeholder="Industrial Use"
-                    required
                   />
                 </div>
               </div>
-              <button class="product-detail-modal-btn" type="submit">Request a Quote</button>
+              <button class="product-detail-modal-btn">Request a Quote</button>
             </form>
           </div>
         </div>
       </div>
     </div>
     <!--PDF OPENER-->
-    <div
+    <!-- <div
       class="modal fade"
       id="pdfModal"
       tabindex="-1"
@@ -867,10 +1059,10 @@
               <h3 id="modalCaption"></h3>
             </div>
 
-            <!-- Carousel inside modal -->
+           
             <div id="modalCarousel" class="carousel slide">
               <div class="carousel-inner">
-                <!-- Slides will be added dynamically -->
+               
               </div>
               <div class="btn-wrap">
                 <button
@@ -916,6 +1108,46 @@
           </div>
         </div>
       </div>
+    </div> -->
+    <div
+      class="modal fade"
+      id="pdfModal"
+      tabindex="-1"
+      aria-labelledby="pdfModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header justify-content-between">
+            <div class="modal-text">
+              <h1 id="modalHeading"></h1>
+              <h3 id="modalCaption"></h3>
+            </div>
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              class="close-btn"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.6239 0.376096C17.1224 -0.125365 16.3101 -0.125365 15.8086 0.376096L9 7.18473L2.19137 0.376096C1.68991 -0.125365 0.877524 -0.125365 0.376096 0.376096C-0.125333 0.877556 -0.125365 1.68994 0.376096 2.19137L7.18473 9L0.376096 15.8086C-0.125365 16.3101 -0.125365 17.1225 0.376096 17.6239C0.877556 18.1253 1.68994 18.1254 2.19137 17.6239L9 10.8153L15.8086 17.6239C16.3101 18.1254 17.1225 18.1254 17.6239 17.6239C18.1253 17.1224 18.1254 16.3101 17.6239 15.8086L10.8153 9L17.6239 2.19137C18.1254 1.68991 18.1254 0.877524 17.6239 0.376096Z"
+                  fill="#9F0A00"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="modal-body">
+            <iframe id="pdfViewer" width="50%" height="600px"></iframe>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!--WOW JS-->
@@ -929,5 +1161,26 @@
     <!--MAIN JAVASCRIPT-->
     <script src="./assets/js/product-detail.js" async defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".open-doc-btn").forEach((button) => {
+          button.addEventListener("click", function () {
+            let carouselId = this.getAttribute("data-carousel-id");
+            let activeSlide = document.querySelector(
+              `#${carouselId} .carousel-item.active`
+            );
+            let docTitle = activeSlide.getAttribute("data-title");
+            let docSrc = activeSlide.getAttribute("data-src");
+
+            // Set modal heading and caption
+            document.getElementById("modalHeading").innerText = docTitle;
+            document.getElementById("modalCaption").innerText = docTitle;
+
+            // Load PDF into modal iframe
+            document.getElementById("pdfViewer").src = docSrc;
+          });
+        });
+      });
+    </script>
   </body>
 </html>

@@ -135,6 +135,28 @@
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: rgba(175, 44, 36, 1) rgba(229, 231, 222, 1); /* Firefox */
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+  /* Webkit Browsers (Chrome, Edge, Safari) */
+  .product-list::-webkit-scrollbar {
+    height: 6px; /* Adjust scrollbar thickness */
+  }
+
+  .product-list::-webkit-scrollbar-track {
+    background: rgba(229, 231, 222, 0.5);
+    border-radius: 3px;
+  }
+
+  .product-list::-webkit-scrollbar-thumb {
+    background: rgba(175, 44, 36, 1);
+    border-radius: 3px;
+  }
+
+  .product-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(145, 34, 28, 1); /* Darker shade on hover */
   }
   .certificate-document .nav-pills .nav-link {
     width: 80px;
@@ -242,6 +264,9 @@
   .certificate-document .nav-pills .nav-link svg {
     width: 18px;
     height: 24px;
+  }
+  .red-border-box {
+    padding: 72px 20px;
   }
 }
 @media screen and (max-width: 475.5px) {
