@@ -120,35 +120,23 @@
             </h1>
           </div>
           <div class="form-wrapper wd-50">
-            <form class="contact-form">
+            <form class="contact-form" onsubmit="submitForm(event)">
               <ul>
                 <li>
                   <label class="label-text">Name</label>
-                  <input type="text" name="name" placeholder="Name" />
+                  <input type="text" name="name" placeholder="Name" required />
                 </li>
                 <li>
                   <label class="label-text">Phone</label>
-                  <input
-                    type="text"
-                    name="phone"
-                    placeholder="+91-9876543210"
-                  />
+                  <input type="text" name="phone" placeholder="+91-9876543210" required />
                 </li>
                 <li>
                   <label class="label-text">Email</label>
-                  <input
-                    type="text"
-                    name="email"
-                    placeholder="example@email.com"
-                  />
+                  <input type="email" name="email" placeholder="example@email.com" required />
                 </li>
                 <li>
                   <label class="label-text">Message</label>
-                  <input
-                    type="text"
-                    name="message"
-                    placeholder="Enquiry Here"
-                  />
+                  <input type="text" name="message" placeholder="Enquiry Here" required />
                 </li>
               </ul>
               <button class="filled-btn suk-btn" type="submit">Submit</button>
@@ -384,5 +372,35 @@
     ></script>
     <!--BLOB JAVASCRIPT-->
     <script src="./assets/js/contactBlob.js" async defer></script>
+    <script>
+      function submitForm(event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        const form = document.querySelector(".contact-form");
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+    
+        fetch("https://api.sukkshma.com/enquiry", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(result => {
+          if (result.success) {
+            alert("Enquiry submitted successfully!");
+            form.reset();
+          } else {
+            alert("Error: " + (result.message || "Failed to submit enquiry."));
+          }
+        })
+        .catch(error => {
+          console.error("Error submitting form:", error);
+          alert("Something went wrong. Please try again later.");
+        });
+      }
+    </script>
   </body>
 </html>
