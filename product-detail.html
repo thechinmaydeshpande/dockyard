@@ -905,57 +905,47 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">
-            <form class="order-form" method="post">
+            <form class="order-form" onsubmit="submitOrder(event)">
               <h1 class="modal-heading">Buy Now</h1>
+      
               <div class="product-detail-input-row">
-                <div class="col-lg-6">
-                  <label>Name</label>
-                  <input
-                    class="product-detail-form-input"
-                    placeholder="Your Name"
-                  />
-                </div>
-                <div class="col-lg-6">
-                  <label>Phone</label>
-                  <input
-                    class="product-detail-form-input"
-                    placeholder="98XXX987XX"
-                  />
-                </div>
+                  <div class="col-lg-6">
+                      <label>Name</label>
+                      <input class="product-detail-form-input" name="name" placeholder="Your Name" required />
+                  </div>
+                  <div class="col-lg-6">
+                      <label>Phone</label>
+                      <input class="product-detail-form-input" name="phone" placeholder="98XXX987XX" required />
+                  </div>
               </div>
+      
               <div class="product-detail-input-row">
-                <div class="col-lg-6">
-                  <label>Email</label>
-                  <input
-                    class="product-detail-form-input"
-                    placeholder="abc@email.com"
-                  />
-                </div>
-                <div class="col-lg-6">
-                  <label>Address</label>
-                  <input
-                    class="product-detail-form-input"
-                    placeholder="Your Address"
-                  />
-                </div>
+                  <div class="col-lg-6">
+                      <label>Email</label>
+                      <input class="product-detail-form-input" name="email" placeholder="abc@email.com" required />
+                  </div>
+                  <div class="col-lg-6">
+                      <label>Address</label>
+                      <input class="product-detail-form-input" name="address" placeholder="Your Address" required />
+                  </div>
               </div>
+      
               <div class="product-detail-input-row">
-                <div class="col-lg-12">
-                  <label>Quantity</label>
-                  <input class="product-detail-form-input" placeholder="5" />
-                </div>
+                  <div class="col-lg-12">
+                      <label>Quantity</label>
+                      <input class="product-detail-form-input" name="quantity" placeholder="5" required />
+                  </div>
               </div>
+      
               <div class="product-detail-input-row">
-                <div class="col-lg-12">
-                  <label>Purpose for which the product is required</label>
-                  <input
-                    class="product-detail-form-input"
-                    placeholder="Industrial Use"
-                  />
-                </div>
+                  <div class="col-lg-12">
+                      <label>Purpose for which the product is required</label>
+                      <input class="product-detail-form-input" name="purpose" placeholder="Industrial Use" required />
+                  </div>
               </div>
-              <button class="product-detail-modal-btn">Place an Order</button>
-            </form>
+      
+              <button class="product-detail-modal-btn" type="submit">Place an Order</button>
+          </form>
           </div>
         </div>
       </div>
@@ -971,57 +961,47 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">
-            <form>
+            <form onsubmit="submitQuoteRequest(event)">
               <h1 class="modal-heading">Request a Quote</h1>
+      
               <div class="product-detail-input-row">
-                <div class="col-lg-6">
-                  <label>Name</label>
-                  <input
-                    class="product-detail-form-input"
-                    placeholder="Your Name"
-                  />
-                </div>
-                <div class="col-lg-6">
-                  <label>Phone</label>
-                  <input
-                    class="product-detail-form-input"
-                    placeholder="98XXX987XX"
-                  />
-                </div>
+                  <div class="col-lg-6">
+                      <label>Name</label>
+                      <input class="product-detail-form-input" name="name" placeholder="Your Name" required />
+                  </div>
+                  <div class="col-lg-6">
+                      <label>Phone</label>
+                      <input class="product-detail-form-input" name="phone" placeholder="98XXX987XX" required />
+                  </div>
               </div>
+      
               <div class="product-detail-input-row">
-                <div class="col-lg-6">
-                  <label>Email</label>
-                  <input
-                    class="product-detail-form-input"
-                    placeholder="abc@email.com"
-                  />
-                </div>
-                <div class="col-lg-6">
-                  <label>Address</label>
-                  <input
-                    class="product-detail-form-input"
-                    placeholder="Your Address"
-                  />
-                </div>
+                  <div class="col-lg-6">
+                      <label>Email</label>
+                      <input class="product-detail-form-input" name="email" placeholder="abc@email.com" required />
+                  </div>
+                  <div class="col-lg-6">
+                      <label>Address</label>
+                      <input class="product-detail-form-input" name="address" placeholder="Your Address" required />
+                  </div>
               </div>
+      
               <div class="product-detail-input-row">
-                <div class="col-lg-12">
-                  <label>Quantity</label>
-                  <input class="product-detail-form-input" placeholder="5" />
-                </div>
+                  <div class="col-lg-12">
+                      <label>Quantity</label>
+                      <input class="product-detail-form-input" name="quantity" placeholder="5" required />
+                  </div>
               </div>
+      
               <div class="product-detail-input-row">
-                <div class="col-lg-12">
-                  <label>Purpose for which the product is required</label>
-                  <input
-                    class="product-detail-form-input"
-                    placeholder="Industrial Use"
-                  />
-                </div>
+                  <div class="col-lg-12">
+                      <label>Purpose for which the product is required</label>
+                      <input class="product-detail-form-input" name="purpose" placeholder="Industrial Use" required />
+                  </div>
               </div>
-              <button class="product-detail-modal-btn">Request a Quote</button>
-            </form>
+      
+              <button class="product-detail-modal-btn" type="submit">Request a Quote</button>
+          </form>
           </div>
         </div>
       </div>
@@ -1182,5 +1162,65 @@
         });
       });
     </script>
+        <script>
+          function submitQuoteRequest(event) {
+              event.preventDefault(); // Prevent default form submission
+  
+              const form = event.target;
+              const formData = new FormData(form);
+              const data = Object.fromEntries(formData.entries());
+  
+              fetch("https://api.sukkshma.com/request", {
+                  method: "POST",
+                  headers: {
+                      "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(data),
+              })
+              .then(response => response.json())
+              .then(result => {
+                  if (result.success) {
+                      alert("Quote request submitted successfully!");
+                      form.reset();
+                  } else {
+                      alert("Error: " + (result.message || "Failed to submit request."));
+                  }
+              })
+              .catch(error => {
+                  console.error("Error submitting form:", error);
+                  alert("Something went wrong. Please try again later.");
+              });
+          }
+      </script>
+          <script>
+            function submitOrder(event) {
+                event.preventDefault(); // Prevent default form submission
+    
+                const form = event.target;
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+    
+                fetch("https://api.sukkshma.com/order", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                })
+                .then(response => response.json())
+                .then(result => {
+                    if (result.success) {
+                        alert("Order placed successfully!");
+                        form.reset();
+                    } else {
+                        alert("Error: " + (result.message || "Failed to place order."));
+                    }
+                })
+                .catch(error => {
+                    console.error("Error submitting form:", error);
+                    alert("Something went wrong. Please try again later.");
+                });
+            }
+        </script>
   </body>
 </html>
